@@ -1,0 +1,1 @@
+# CI: [![Build status](https://ci.appveyor.com/api/projects/status/vji36pc8ww77yac0?svg=true)](https://ci.appveyor.com/project/aremarss/cardorder)
