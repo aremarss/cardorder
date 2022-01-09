@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CardOrderTest {
+public class CardOrderTestV1 {
 
     private WebDriver driver;
 
@@ -26,6 +26,7 @@ public class CardOrderTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999/");
     }
 
     @AfterEach
@@ -36,7 +37,6 @@ public class CardOrderTest {
 
     @Test
     void shouldReturnSuccessPage() {
-        driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иван Иванов-Городецкий");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79003332211");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
